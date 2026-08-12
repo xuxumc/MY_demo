@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BugCollector</class>
+ <widget class="QMainWindow" name="BugCollector">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1180</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BugCollector</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow, QWidget#centralwidget { background: #0B1020; color: #EAF0FF; font-family: &quot;Microsoft YaHei UI&quot;, &quot;Segoe UI&quot;; }
+QWidget#welcomePage { background: qradialgradient(cx:0.5, cy:0.38, radius:0.8, fx:0.5, fy:0.38, stop:0 #172755, stop:0.45 #101936, stop:1 #090D19); }
+QFrame#welcomeCard, QFrame#side, QFrame#editor { background: #151D31; border: 1px solid #263451; border-radius: 22px; }
+QFrame#welcomeCard { background: rgba(21, 29, 49, 235); }
+QLabel#logoBadge { background: #6C63FF; color: white; border-radius: 32px; font-size: 30px; font-weight: 700; }
+QLabel#welcomeTitle { font-size: 34px; font-weight: 700; color: #F6F8FF; }
+QLabel#welcomeSubtitle, QLabel#editorSubtitle, QLabel#countLabel, QLabel#emptyHint { color: #94A3C7; }
+QLabel#brandLabel { font-size: 20px; font-weight: 700; color: #F3F6FF; }
+QLabel#editorTitle { font-size: 24px; font-weight: 700; color: #F4F7FF; }
+QLabel#sectionTitle { font-size: 15px; font-weight: 700; color: #DDE6FF; }
+QLabel[field=&quot;true&quot;] { color: #AAB7D5; font-size: 12px; font-weight: 600; }
+QPushButton { min-height: 40px; padding: 0 18px; border-radius: 10px; border: 1px solid #334364; background: #202B45; color: #EAF0FF; font-weight: 600; }
+QPushButton:hover { background: #293858; border-color: #53698F; }
+QPushButton:pressed { background: #1A243A; }
+QPushButton#startBtn, QPushButton#saveBtn { background: #6C63FF; border: 1px solid #817AFF; color: white; }
+QPushButton#startBtn:hover, QPushButton#saveBtn:hover { background: #7C74FF; }
+QPushButton#startBtn { min-height: 48px; border-radius: 14px; font-size: 15px; }
+QPushButton#backBtn { background: transparent; border: none; color: #9DABD0; padding: 0 8px; }
+QLineEdit, QComboBox, QPlainTextEdit { background: #0E1527; border: 1px solid #2A3857; border-radius: 10px; color: #EDF2FF; selection-background-color: #6C63FF; padding: 9px 11px; }
+QLineEdit:focus, QComboBox:focus, QPlainTextEdit:focus { border: 1px solid #746CFF; background: #111A30; }
+QComboBox { min-height: 22px; }
+QComboBox::drop-down { border: none; width: 28px; }
+QComboBox QAbstractItemView { background: #151D31; color: #EDF2FF; border: 1px solid #334364; selection-background-color: #6C63FF; }
+QListWidget { background: transparent; border: none; outline: none; color: #DCE5FA; }
+QListWidget::item { background: #10182B; border: 1px solid #263451; border-radius: 10px; margin: 3px 0; }
+QListWidget::item:hover { background: #1B2742; border-color: #405174; }
+QListWidget::item:selected { background: #292A57; border: 1px solid #6C63FF; color: white; }
+QLabel#statusLabel { color: #F2A6A6; }
+QLabel#statusLabel[success=&quot;true&quot;] { color: #6EE7B7; }
+QScrollBar:vertical { background: transparent; width: 8px; margin: 2px; }
+QScrollBar::handle:vertical { background: #344260; border-radius: 4px; min-height: 26px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+  </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="rootLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="pages">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="welcomePage">
+       <layout class="QVBoxLayout" name="welcomeOuter">
+        <property name="leftMargin">
+         <number>28</number>
+        </property>
+        <property name="topMargin">
+         <number>28</number>
+        </property>
+        <property name="rightMargin">
+         <number>28</number>
+        </property>
+        <property name="bottomMargin">
+         <number>28</number>
+        </property>
+        <item>
+         <spacer name="welcomeTop">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>80</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="welcomeRow">
+          <item>
+           <spacer name="welcomeLeft">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>160</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QFrame" name="welcomeCard">
+            <property name="minimumSize">
+             <size>
+              <width>500</width>
+              <height>430</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>620</width>
+              <height>470</height>
+             </size>
+            </property>
+            <layout class="QVBoxLayout" name="welcomeCardLayout">
+             <property name="spacing">
+              <number>18</number>
+             </property>
+             <property name="leftMargin">
+              <number>58</number>
+             </property>
+             <property name="topMargin">
+              <number>50</number>
+             </property>
+             <property name="rightMargin">
+              <number>58</number>
+             </property>
+             <property name="bottomMargin">
+              <number>46</number>
+             </property>
+             <item>
+              <layout class="QHBoxLayout" name="logoRow">
+               <item>
+                <spacer name="logoLeft">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="logoBadge">
+                 <property name="minimumSize">
+                  <size>
+                   <width>64</width>
+                   <height>64</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>64</width>
+                   <height>64</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>🐛</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="logoRight">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="welcomeTitle">
+               <property name="text">
+                <string>BugCollector</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="welcomeSubtitle">
+               <property name="text">
+                <string>把每一次错误，变成下一次进步的线索</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="welcomeGap">
+               <property name="orientation">
+                <enum>Qt::Orientation::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>22</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="startBtn">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string>开始整理  →</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="welcomeFoot">
+               <property name="styleSheet">
+                <string notr="true">color:#647394; font-size:11px;</string>
+               </property>
+               <property name="text">
+                <string>记录 · 分析 · 复盘</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="welcomeRight">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>160</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="welcomeBottom">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>80</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="workspacePage">
+       <layout class="QVBoxLayout" name="workspaceOuter">
+        <property name="spacing">
+         <number>18</number>
+        </property>
+        <property name="leftMargin">
+         <number>30</number>
+        </property>
+        <property name="topMargin">
+         <number>22</number>
+        </property>
+        <property name="rightMargin">
+         <number>30</number>
+        </property>
+        <property name="bottomMargin">
+         <number>28</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="topBar">
+          <item>
+           <widget class="QLabel" name="brandLabel">
+            <property name="text">
+             <string>🐛  BugCollector</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="topBarSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="backBtn">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>返回首页</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="contentLayout">
+          <property name="spacing">
+           <number>20</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="side">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>360</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <layout class="QVBoxLayout" name="sideLayout">
+             <property name="spacing">
+              <number>12</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="topMargin">
+              <number>22</number>
+             </property>
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <property name="bottomMargin">
+              <number>20</number>
+             </property>
+             <item>
+              <layout class="QHBoxLayout" name="libraryHeader">
+               <item>
+                <widget class="QLabel" name="sectionTitle">
+                 <property name="text">
+                  <string>Bug 资料库</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="librarySpacer">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="countLabel">
+                 <property name="text">
+                  <string>0 条记录</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QPushButton" name="newBtn">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string>＋  新建记录</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="emptyHint">
+               <property name="text">
+                <string>还没有记录，创建第一只 Bug 吧</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QListWidget" name="bugList"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="editor">
+            <layout class="QVBoxLayout" name="editorLayout">
+             <property name="spacing">
+              <number>12</number>
+             </property>
+             <property name="leftMargin">
+              <number>28</number>
+             </property>
+             <property name="topMargin">
+              <number>24</number>
+             </property>
+             <property name="rightMargin">
+              <number>28</number>
+             </property>
+             <property name="bottomMargin">
+              <number>22</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="editorTitle">
+               <property name="text">
+                <string>记录一个 Bug</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="editorSubtitle">
+               <property name="text">
+                <string>保留现场，也写下你最终找到的原因。</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="editorGap">
+               <property name="orientation">
+                <enum>Qt::Orientation::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>8</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="basicFields">
+               <property name="spacing">
+                <number>14</number>
+               </property>
+               <item>
+                <layout class="QVBoxLayout" name="nameField">
+                 <item>
+                  <widget class="QLabel" name="nameLabel">
+                   <property name="text">
+                    <string>BUG 名称</string>
+                   </property>
+                   <property name="field" stdset="0">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="bugName">
+                   <property name="placeholderText">
+                    <string>例如：数组越界导致崩溃</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="typeField">
+                 <item>
+                  <widget class="QLabel" name="typeLabel">
+                   <property name="text">
+                    <string>错误类型</string>
+                   </property>
+                   <property name="field" stdset="0">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="bugType">
+                   <item>
+                    <property name="text">
+                     <string>RE</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>WA</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>TLE</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>MLE</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>CE</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Other</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="codeLabel">
+               <property name="text">
+                <string>问题代码 / 现场</string>
+               </property>
+               <property name="field" stdset="0">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPlainTextEdit" name="bugCode">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>粘贴相关代码、报错信息或复现步骤…</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="reasonLabel">
+               <property name="text">
+                <string>原因与解决方法</string>
+               </property>
+               <property name="field" stdset="0">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPlainTextEdit" name="bugReason">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>110</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>是什么导致了它？最后如何修复？</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="actionRow">
+               <item>
+                <widget class="QLabel" name="statusLabel">
+                 <property name="text">
+                  <string>内容会保存在本机</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="actionSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>30</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="saveBtn">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>42</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string>保存记录</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QPushButton" name="shanchu">
+               <property name="text">
+                <string>删除记录</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
