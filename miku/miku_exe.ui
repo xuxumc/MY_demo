@@ -1,0 +1,4189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>miku_EXE</class>
+ <widget class="QMainWindow" name="miku_EXE">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>528</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Hatsune Miku</string>
+  </property>
+  <property name="statusTip">
+   <string/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>0</y>
+      <width>811</width>
+      <height>528</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #39C5BB, stop:0.5 #2A9D96, stop:1 #1A7A75);
+QLabel { background: transparent; }
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>9</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <property name="styleSheet">
+      <string notr="true">background: transparent;</string>
+     </property>
+     <widget class="QFrame" name="glass_panel_start">
+      <property name="geometry">
+       <rect>
+        <x>265</x>
+        <y>60</y>
+        <width>290</width>
+        <height>220</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 24px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="deco_note_1">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>90</y>
+        <width>180</width>
+        <height>180</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 20); background: transparent; font: 100pt &quot;Segoe UI Symbol&quot;;</string>
+      </property>
+      <property name="text">
+       <string>♪</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="deco_note_2">
+      <property name="geometry">
+       <rect>
+        <x>685</x>
+        <y>25</y>
+        <width>60</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 40); background: transparent; font: 32pt &quot;Segoe UI Symbol&quot;;</string>
+      </property>
+      <property name="text">
+       <string>♫</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="deco_note_3">
+      <property name="geometry">
+       <rect>
+        <x>95</x>
+        <y>355</y>
+        <width>70</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 30); background: transparent; font: 38pt &quot;Segoe UI Symbol&quot;;</string>
+      </property>
+      <property name="text">
+       <string>♬</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="deco_note_4">
+      <property name="geometry">
+       <rect>
+        <x>605</x>
+        <y>40</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 55); background: transparent; font: 16pt &quot;Segoe UI Symbol&quot;;</string>
+      </property>
+      <property name="text">
+       <string>♩</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="JieMian_1_photo">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>220</y>
+        <width>341</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="miku_photo.qrc">:/new/prefix1/miku_peg-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="zhixie">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #FFFFFF, stop:1 #E0F7F5);
+    color: #2A9D96;
+    border: 2px solid #39C5BB;
+    border-radius: 15px;
+    padding: 6px 18px;
+    font: bold 14pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #E0F7F5, stop:1 #FFFFFF);
+    color: #1A7A75;
+    border: 2px solid #2A9D96;
+}
+QPushButton:pressed {
+    background: #B8E8E3;
+    color: #1A7A75;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>致谢</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="titleLabel">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>90</y>
+        <width>191</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>40</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: transparent;
+</string>
+      </property>
+      <property name="text">
+       <string>密 码 本</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="jinru">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>440</y>
+        <width>271</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #2A9D96, stop:1 #39C5BB);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 22px;
+    padding: 10px 30px;
+    font: bold 16pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #39C5BB, stop:1 #4FD4C9);
+}
+QPushButton:pressed {
+    background: #2A9D96;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>进入→</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="titleLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>292</x>
+        <y>92</y>
+        <width>191</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>40</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(0, 0, 0, 80);</string>
+      </property>
+      <property name="text">
+       <string>密 码 本</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="subtitleLabel_start">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>165</y>
+        <width>360</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 200); background: transparent; font: 10pt &quot;Microsoft YaHei&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Hatsune Miku Password Manager</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QFrame" name="deco_line_start">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>193</y>
+        <width>100</width>
+        <height>2</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 100); border-radius: 1px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="morenmima_label">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>205</y>
+        <width>180</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 180); background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>默认密码是：miku</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>230</y>
+        <width>260</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>hooge 05_53</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 140); background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>你也许会忘记密码，但有人会记着</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <zorder>glass_panel_start</zorder>
+     <zorder>deco_note_1</zorder>
+     <zorder>deco_note_2</zorder>
+     <zorder>deco_note_3</zorder>
+     <zorder>deco_note_4</zorder>
+     <zorder>JieMian_1_photo</zorder>
+     <zorder>zhixie</zorder>
+     <zorder>jinru</zorder>
+     <zorder>titleLabel_2</zorder>
+     <zorder>titleLabel</zorder>
+     <zorder>subtitleLabel_start</zorder>
+     <zorder>deco_line_start</zorder>
+     <zorder>morenmima_label</zorder>
+     <zorder>label_6</zorder>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QLabel" name="deco_note_zx1">
+      <property name="geometry">
+       <rect>
+        <x>45</x>
+        <y>20</y>
+        <width>90</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 25); background: transparent; font: 50pt &quot;Segoe UI Symbol&quot;;</string>
+      </property>
+      <property name="text">
+       <string>♬</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="deco_note_zx2">
+      <property name="geometry">
+       <rect>
+        <x>675</x>
+        <y>395</y>
+        <width>65</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 30); background: transparent; font: 36pt &quot;Segoe UI Symbol&quot;;</string>
+      </property>
+      <property name="text">
+       <string>♪</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="deco_note_zx3">
+      <property name="geometry">
+       <rect>
+        <x>715</x>
+        <y>55</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 50); background: transparent; font: 16pt &quot;Segoe UI Symbol&quot;;</string>
+      </property>
+      <property name="text">
+       <string>♫</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="subtitleLabel_zx">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>66</y>
+        <width>300</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 160); background: transparent; font: 9pt &quot;Microsoft YaHei&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Acknowledgments</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QFrame" name="deco_line_zx">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>82</y>
+        <width>100</width>
+        <height>2</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 80); border-radius: 1px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>335</x>
+        <y>20</y>
+        <width>140</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>仿宋</family>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF; background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>致谢</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="zhixie_fanhui_push">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>15</y>
+        <width>120</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px;
+    padding: 4px 16px;
+    font: bold 11pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: #FFFFFF;
+    color: #39C5BB;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="shadow_zhixie_1">
+      <property name="geometry">
+       <rect>
+        <x>42</x>
+        <y>89</y>
+        <width>340</width>
+        <height>290</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(0, 0, 0, 0.08); border-radius: 16px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_zhixie_1">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>85</y>
+        <width>340</width>
+        <height>290</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #F5FFFE); border-radius: 16px; border: 1px solid rgba(57, 197, 187, 0.12);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>20</y>
+         <width>140</width>
+         <height>140</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="miku_photo.qrc">:/new/prefix1/miku_peg.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>175</y>
+         <width>300</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>插画作者：Sakotsu▽</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>210</y>
+         <width>300</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #999999; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>插画来源：https://piapro.jp/t/8rQ9</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="shadow_zhixie_2">
+      <property name="geometry">
+       <rect>
+        <x>432</x>
+        <y>89</y>
+        <width>340</width>
+        <height>290</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(0, 0, 0, 0.08); border-radius: 16px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_zhixie_2">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>85</y>
+        <width>340</width>
+        <height>290</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #F5FFFE); border-radius: 16px; border: 1px solid rgba(57, 197, 187, 0.12);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>20</y>
+         <width>140</width>
+         <height>140</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="miku_photo_2.qrc">:/new/prefix1/miku_peg_2.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>175</y>
+         <width>300</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>ForbiddenCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> background: transparent;
+color: rgb(255, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>无法获得作者名称</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>200</y>
+         <width>300</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>插画作者：mikumikumiku</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>235</y>
+         <width>300</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #999999; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>插画来源：https://piapro.jp/t/AhWK</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>200</y>
+         <width>53</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(54, 54, 54);</string>
+       </property>
+       <property name="text">
+        <string>站位符</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="footerLabel_zx">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>440</y>
+        <width>400</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 100); background: transparent; font: 9pt &quot;Microsoft YaHei&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Miku Password Manager v1.0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <property name="styleSheet">
+      <string notr="true">background: transparent;</string>
+     </property>
+     <widget class="QFrame" name="glass_panel_pwd">
+      <property name="geometry">
+       <rect>
+        <x>195</x>
+        <y>50</y>
+        <width>420</width>
+        <height>330</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 24px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="deco_note_pwd1">
+      <property name="geometry">
+       <rect>
+        <x>665</x>
+        <y>45</y>
+        <width>65</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 35); background: transparent; font: 36pt &quot;Segoe UI Symbol&quot;;</string>
+      </property>
+      <property name="text">
+       <string>♪</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="deco_note_pwd2">
+      <property name="geometry">
+       <rect>
+        <x>115</x>
+        <y>365</y>
+        <width>55</width>
+        <height>55</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 30); background: transparent; font: 30pt &quot;Segoe UI Symbol&quot;;</string>
+      </property>
+      <property name="text">
+       <string>♫</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="mima_lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>277</x>
+        <y>185</y>
+        <width>300</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #FFFFFF;
+    border: 2px solid #39C5BB;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font: 14pt &quot;Microsoft YaHei&quot;;
+    color: #2A9D96;
+}
+QLineEdit:focus {
+    border: 2px solid #2A9D96;
+}
+</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::EchoMode::Password</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="hintLabel_pwd">
+      <property name="geometry">
+       <rect>
+        <x>277</x>
+        <y>245</y>
+        <width>300</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 120); background: transparent; font: 9pt &quot;Microsoft YaHei&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Press Enter to confirm</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="mima_quren">
+      <property name="geometry">
+       <rect>
+        <x>325</x>
+        <y>290</y>
+        <width>150</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 22px;
+    padding: 8px 24px;
+    font: bold 14pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+QPushButton:pressed {
+    background: rgba(255, 255, 255, 0.1);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>确认</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="mima_fanhui">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>30</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #2A9D96;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font: bold 10pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background-color: #1A7A75;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="pwdTitleLabel">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>80</y>
+        <width>300</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF;
+background: transparent;
+font: bold 24pt &quot;Microsoft YaHei&quot;;
+</string>
+      </property>
+      <property name="text">
+       <string>请输入密码</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mikuAvatar">
+      <property name="geometry">
+       <rect>
+        <x>222</x>
+        <y>185</y>
+        <width>45</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="miku_photo_2.qrc">:/new/prefix1/miku_peg_2.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_forgot_pwd">
+      <property name="geometry">
+       <rect>
+        <x>325</x>
+        <y>345</y>
+        <width>150</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: rgba(255, 255, 255, 120);
+    border: none;
+    font: 9pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>忘记密码？</string>
+      </property>
+     </widget>
+     <zorder>glass_panel_pwd</zorder>
+     <zorder>deco_note_pwd1</zorder>
+     <zorder>deco_note_pwd2</zorder>
+     <zorder>mikuAvatar</zorder>
+     <zorder>mima_lineEdit</zorder>
+     <zorder>hintLabel_pwd</zorder>
+     <zorder>mima_quren</zorder>
+     <zorder>mima_fanhui</zorder>
+     <zorder>pwdTitleLabel</zorder>
+     <zorder>btn_forgot_pwd</zorder>
+    </widget>
+    <widget class="QWidget" name="page_7">
+     <widget class="QFrame" name="glass_header_main">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>811</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.15); </string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mainTitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>300</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF;
+background: transparent;
+</string>
+      </property>
+      <property name="text">
+       <string>密码管理</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mainSubtitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>65</y>
+        <width>280</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 180);
+background: transparent;
+</string>
+      </property>
+      <property name="text">
+       <string>Hatsune Miku Password Manager</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_logout">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>15</y>
+        <width>120</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px;
+    padding: 4px 16px;
+    font: bold 11pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: #FFFFFF;
+    color: #39C5BB;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>退出登录</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="shadow_card_add">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>114</y>
+        <width>440</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(0, 0, 0, 0.08); border-radius: 16px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="card_add">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>440</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #F0FAF9); border-radius: 16px; border: 1px solid rgba(57, 197, 187, 0.15);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="icon_add">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>55</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>24</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #2A9D96; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="title_add">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>18</y>
+         <width>330</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>添加密码</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="desc_add">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>55</y>
+         <width>330</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #999999; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>新增一条密码记录</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="shadow_card_view">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>224</y>
+        <width>440</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(0, 0, 0, 0.08); border-radius: 16px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="card_view">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>220</y>
+        <width>440</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #F0FAF9); border-radius: 16px; border: 1px solid rgba(57, 197, 187, 0.15);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="icon_view">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>55</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>24</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #2A9D96; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>=</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="title_view">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>18</y>
+         <width>330</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>查看密码</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="desc_view">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>55</y>
+         <width>330</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #999999; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>浏览所有已存记录</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="shadow_card_modify">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>334</y>
+        <width>440</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(0, 0, 0, 0.08); border-radius: 16px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="card_modify">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>330</y>
+        <width>440</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #F0FAF9); border-radius: 16px; border: 1px solid rgba(57, 197, 187, 0.15);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="icon_modify">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>55</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>24</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #2A9D96; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>#</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="title_modify">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>18</y>
+         <width>330</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>修改密码</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="desc_modify">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>55</y>
+         <width>330</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #999999; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>编辑已有密码条目</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="glass_panel_illust">
+      <property name="geometry">
+       <rect>
+        <x>485</x>
+        <y>85</y>
+        <width>310</width>
+        <height>380</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.10); border-radius: 20px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mikuIllust_main">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>100</y>
+        <width>270</width>
+        <height>310</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="miku_photo_2.qrc">:/new/prefix1/miku_peg_2.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statLabel">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>425</y>
+        <width>80</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 160);
+background: transparent;
+</string>
+      </property>
+      <property name="text">
+       <string>已储存</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statCount">
+      <property name="geometry">
+       <rect>
+        <x>585</x>
+        <y>425</y>
+        <width>80</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF; background: transparent; font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>0 条</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_changelogin">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>445</y>
+        <width>140</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    border: none;
+    font: 9pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    color: #FFFFFF;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>修改登录密码</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_changelogin_chongzhi">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>470</y>
+        <width>140</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    border: none;
+    font: 9pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    color: #FFFFFF;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>重置密码</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_security_setup">
+      <property name="geometry">
+       <rect>
+        <x>175</x>
+        <y>445</y>
+        <width>140</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    border: none;
+    font: 9pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    color: #FFFFFF;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>设置密保</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_8">
+     <widget class="QFrame" name="glass_header_add">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>811</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.15); </string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="addTitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>300</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF; background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>添加密码</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="addSubtitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>65</y>
+        <width>280</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 180); background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>Add New Password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_add_back">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>15</y>
+        <width>120</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px;
+    padding: 4px 16px;
+    font: bold 11pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: #FFFFFF;
+    color: #39C5BB;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="shadow_card_add_form">
+      <property name="geometry">
+       <rect>
+        <x>82</x>
+        <y>114</y>
+        <width>650</width>
+        <height>390</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(0, 0, 0, 0.08); border-radius: 16px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="card_add_form">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>110</y>
+        <width>650</width>
+        <height>390</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #F5FFFE); border-radius: 16px; border: 1px solid rgba(57, 197, 187, 0.12);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="label_add_name">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>80</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>名称</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_add_name">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>30</y>
+         <width>470</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_add_account">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>85</y>
+         <width>80</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>账号</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_add_account">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>85</y>
+         <width>470</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_add_password">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>140</y>
+         <width>80</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>密码</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_add_password">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>140</y>
+         <width>400</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::EchoMode::Password</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_add_showpwd">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>140</y>
+         <width>60</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #E0F7F5;
+    color: #2A9D96;
+    border: none;
+    border-radius: 8px;
+    font: bold 10pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background-color: #39C5BB;
+    color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>切换</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_add_note">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>195</y>
+         <width>80</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>备注</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="edit_add_note">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>195</y>
+         <width>470</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTextEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QTextEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_add_save">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>310</y>
+         <width>130</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #2A9D96, stop:1 #39C5BB);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    font: bold 13pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #39C5BB, stop:1 #4FD4C9);
+}
+QPushButton:pressed {
+    background: #2A9D96;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>保存</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_9">
+     <widget class="QFrame" name="glass_header_view">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>811</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.15); </string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="viewTitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>300</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF; background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>查看密码</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="viewSubtitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>65</y>
+        <width>280</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 180); background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>View Passwords</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_view_back">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>15</y>
+        <width>120</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px;
+    padding: 4px 16px;
+    font: bold 11pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: #FFFFFF;
+    color: #39C5BB;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edit_search">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>300</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 17px;
+    padding: 5px 15px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #FFFFFF;
+}
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>搜索记录...</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="list_passwords">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>150</y>
+        <width>300</width>
+        <height>350</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QListWidget {
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 8px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QListWidget::item {
+    padding: 10px 12px;
+    border-bottom: 1px solid #F0F0F0;
+    border-radius: 6px;
+}
+QListWidget::item:hover {
+    background-color: #F0FFFE;
+}
+QListWidget::item:selected {
+    background-color: #E0F7F5;
+    color: #2A9D96;
+    font-weight: bold;
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="shadow_card_detail">
+      <property name="geometry">
+       <rect>
+        <x>362</x>
+        <y>104</y>
+        <width>420</width>
+        <height>400</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(0, 0, 0, 0.08); border-radius: 16px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="card_detail">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>100</y>
+        <width>420</width>
+        <height>400</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #F5FFFE); border-radius: 16px; border: 1px solid rgba(57, 197, 187, 0.12);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="label_detail_title">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>15</y>
+         <width>200</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>记录详情</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_detail_name_t">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>80</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #999999; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>名称</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_detail_name">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>60</y>
+         <width>290</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_detail_account_t">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>100</y>
+         <width>80</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #999999; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>账号</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_detail_account">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>100</y>
+         <width>290</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_detail_password_t">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>140</y>
+         <width>80</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #999999; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>密码</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_detail_password">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>140</y>
+         <width>210</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>******</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_detail_note_t">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>180</y>
+         <width>80</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #999999; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>备注</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_detail_note">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>180</y>
+         <width>290</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>-</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_10">
+     <widget class="QFrame" name="glass_header_modify">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>811</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.15); </string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="modifyTitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>300</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF; background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>修改密码</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="modifySubtitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>65</y>
+        <width>280</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 180); background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>Modify Password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_modify_back">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>15</y>
+        <width>120</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px;
+    padding: 4px 16px;
+    font: bold 11pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: #FFFFFF;
+    color: #39C5BB;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_select_record">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>80</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF; background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>选择记录</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="combo_select">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>100</y>
+        <width>400</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    background-color: #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    padding: 4px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QComboBox:hover {
+    border: 2px solid #FFFFFF;
+}
+QComboBox::drop-down {
+    border: none;
+    width: 30px;
+}
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    selection-background-color: #E0F7F5;
+    selection-color: #2A9D96;
+    outline: none;
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="shadow_card_modify_form">
+      <property name="geometry">
+       <rect>
+        <x>82</x>
+        <y>154</y>
+        <width>650</width>
+        <height>350</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(0, 0, 0, 0.08); border-radius: 16px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="card_modify_form">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>150</y>
+        <width>650</width>
+        <height>350</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #F5FFFE); border-radius: 16px; border: 1px solid rgba(57, 197, 187, 0.12);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="label_modify_name">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>25</y>
+         <width>80</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>名称</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_modify_name">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>25</y>
+         <width>470</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_modify_account">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>75</y>
+         <width>80</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>账号</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_modify_account">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>75</y>
+         <width>470</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_modify_password">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>125</y>
+         <width>80</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>密码</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_modify_password">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>125</y>
+         <width>400</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::EchoMode::Password</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_modify_showpwd">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>125</y>
+         <width>60</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #E0F7F5;
+    color: #2A9D96;
+    border: none;
+    border-radius: 8px;
+    font: bold 10pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background-color: #39C5BB;
+    color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>显示</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_modify_note">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>175</y>
+         <width>80</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>备注</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="edit_modify_note">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>175</y>
+         <width>470</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTextEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QTextEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_modify_delete">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>280</y>
+         <width>120</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background: transparent;
+    color: #E05050;
+    border: 2px solid #E05050;
+    border-radius: 19px;
+    font: bold 12pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: #E05050;
+    color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>删除</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_modify_save">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>280</y>
+         <width>130</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #2A9D96, stop:1 #39C5BB);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 19px;
+    font: bold 13pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #39C5BB, stop:1 #4FD4C9);
+}
+QPushButton:pressed {
+    background: #2A9D96;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>保存</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_11">
+     <widget class="QFrame" name="glass_header_changepwd">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>811</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.15); </string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="changePwdTitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>300</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF; background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>修改登录密码</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="changePwdSubtitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>65</y>
+        <width>280</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 180); background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>Change Login Password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_changepwd_back">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>15</y>
+        <width>120</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px;
+    padding: 4px 16px;
+    font: bold 11pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: #FFFFFF;
+    color: #39C5BB;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="shadow_card_changepwd">
+      <property name="geometry">
+       <rect>
+        <x>182</x>
+        <y>114</y>
+        <width>450</width>
+        <height>320</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(0, 0, 0, 0.08); border-radius: 16px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="card_changepwd_form">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>110</y>
+        <width>450</width>
+        <height>320</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #F5FFFE); border-radius: 16px; border: 1px solid rgba(57, 197, 187, 0.12);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="label_old_pwd">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>旧密码</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_old_pwd">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>30</y>
+         <width>260</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::EchoMode::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_new_pwd">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>90</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>新密码</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_new_pwd">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>90</y>
+         <width>260</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::EchoMode::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_confirm_pwd">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>150</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>确认密码</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_confirm_pwd">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>150</y>
+         <width>260</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::EchoMode::Password</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_changepwd_confirm">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>220</y>
+         <width>130</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #2A9D96, stop:1 #39C5BB);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    font: bold 13pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #39C5BB, stop:1 #4FD4C9);
+}
+QPushButton:pressed {
+    background: #2A9D96;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>确认修改</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_12">
+     <property name="styleSheet">
+      <string notr="true">background: transparent;</string>
+     </property>
+     <widget class="QFrame" name="glass_header_resetpwd">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>811</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.15);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="resetPwdTitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>300</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF; background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>重置密码</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="resetPwdSubtitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>65</y>
+        <width>280</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 180); background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>Reset Password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_resetpwd_back">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>15</y>
+        <width>120</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px;
+    padding: 4px 16px;
+    font: bold 11pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: #FFFFFF;
+    color: #39C5BB;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="shadow_card_resetpwd">
+      <property name="geometry">
+       <rect>
+        <x>182</x>
+        <y>124</y>
+        <width>450</width>
+        <height>310</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(0, 0, 0, 0.08); border-radius: 16px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="card_resetpwd_form">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>120</y>
+        <width>450</width>
+        <height>310</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #F5FFFE); border-radius: 16px; border: 1px solid rgba(57, 197, 187, 0.12);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="label_reset_current_pwd">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>当前密码</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_reset_current_pwd">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>30</y>
+         <width>220</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::EchoMode::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>请输入当前密码</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_reset_showpwd">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>30</y>
+         <width>50</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #E0F7F5;
+    color: #2A9D96;
+    border: none;
+    border-radius: 8px;
+    font: bold 10pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background-color: #39C5BB;
+    color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>显</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="warning_box_resetpwd">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>85</y>
+         <width>370</width>
+         <height>95</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: #FFF4E6; border: 1px solid rgba(255, 152, 0, 0.3); border-radius: 10px;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <widget class="QLabel" name="label_warning_icon">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>25</y>
+          <width>35</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>24</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #FF9800; background: transparent;</string>
+        </property>
+        <property name="text">
+         <string>!</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_warning_text">
+        <property name="geometry">
+         <rect>
+          <x>55</x>
+          <y>15</y>
+          <width>305</width>
+          <height>65</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #8B6B3A; background: transparent;</string>
+        </property>
+        <property name="text">
+         <string>此操作将把登录密码重置为默认密码 miku。
+重置后请使用默认密码登录。</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btn_resetpwd_confirm">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>240</y>
+         <width>130</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #E67E22, stop:1 #F39C12);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    font: bold 13pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #F39C12, stop:1 #F5B041);
+}
+QPushButton:pressed {
+    background: #D35400;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>确认重置</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_13">
+     <property name="styleSheet">
+      <string notr="true">background: transparent;</string>
+     </property>
+     <widget class="QFrame" name="glass_header_security">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>811</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.15);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="securityTitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>300</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF; background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>密保设置</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="securitySubtitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>65</y>
+        <width>280</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 180); background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>Security Question</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_security_back">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>15</y>
+        <width>120</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px;
+    padding: 4px 16px;
+    font: bold 11pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: #FFFFFF;
+    color: #39C5BB;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="shadow_card_security">
+      <property name="geometry">
+       <rect>
+        <x>182</x>
+        <y>144</y>
+        <width>450</width>
+        <height>290</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(0, 0, 0, 0.08); border-radius: 16px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="card_security_form">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>140</y>
+        <width>450</width>
+        <height>290</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #F5FFFE); border-radius: 16px; border: 1px solid rgba(57, 197, 187, 0.12);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="label_security_question">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>密保问题</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="combo_security_question">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>30</y>
+         <width>260</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 4px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QComboBox:hover {
+    border: 2px solid #39C5BB;
+}
+QComboBox::drop-down {
+    border: none;
+    width: 30px;
+}
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    color: #333333;
+    border: 1px solid #E0E0E0;
+    selection-background-color: #E0F7F5;
+    selection-color: #2A9D96;
+    outline: none;
+}
+QComboBox::item {
+    color: #333333;
+}
+QComboBox::item:selected {
+    color: #2A9D96;
+    background-color: #E0F7F5;
+}</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>初音未来的代表色是什么？</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>初音未来的生日是几月几号？</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>初音未来的代表曲是哪一首？</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>初音未来是由哪个公司开发的？</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>初音未来的角色编号是多少？</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_security_answer">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>85</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>你的答案</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_security_answer">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>85</y>
+         <width>260</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>请输入答案</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_security_confirm">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>140</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>确认答案</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_security_confirm">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>140</y>
+         <width>260</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>请再次输入答案</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_security_save">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>210</y>
+         <width>130</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #2A9D96, stop:1 #39C5BB);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    font: bold 13pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #39C5BB, stop:1 #4FD4C9);
+}
+QPushButton:pressed {
+    background: #2A9D96;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>保存密保</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_14">
+     <property name="styleSheet">
+      <string notr="true">background: transparent;</string>
+     </property>
+     <widget class="QFrame" name="glass_header_recovery">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>811</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.15);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="recoveryTitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>300</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF; background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>找回密码</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="recoverySubtitle">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>65</y>
+        <width>280</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(255, 255, 255, 180); background: transparent;</string>
+      </property>
+      <property name="text">
+       <string>Password Recovery</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_recovery_back">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>15</y>
+        <width>120</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px;
+    padding: 4px 16px;
+    font: bold 11pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: #FFFFFF;
+    color: #39C5BB;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="shadow_card_recovery">
+      <property name="geometry">
+       <rect>
+        <x>182</x>
+        <y>124</y>
+        <width>450</width>
+        <height>380</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(0, 0, 0, 0.08); border-radius: 16px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="card_recovery_form">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>120</y>
+        <width>450</width>
+        <height>380</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #F5FFFE); border-radius: 16px; border: 1px solid rgba(57, 197, 187, 0.12);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="label_recovery_question_t">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>25</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>密保问题</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_recovery_question">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>25</y>
+         <width>260</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #2A9D96; background-color: #F0FAF9; border: 1px solid rgba(57, 197, 187, 0.2); border-radius: 8px; padding: 5px 12px;</string>
+       </property>
+       <property name="text">
+        <string>（请先设置密保问题）</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_recovery_answer">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>80</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>你的答案</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_recovery_answer">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>80</y>
+         <width>260</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>请输入密保答案</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_recovery_verify">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>130</y>
+         <width>130</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #2A9D96, stop:1 #39C5BB);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 19px;
+    font: bold 12pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #39C5BB, stop:1 #4FD4C9);
+}
+QPushButton:pressed {
+    background: #2A9D96;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>验证答案</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="deco_line_recovery">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>190</y>
+         <width>370</width>
+         <height>2</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgba(57, 197, 187, 0.15); border-radius: 1px;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_recovery_newpwd">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>215</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>新密码</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_recovery_newpwd">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>215</y>
+         <width>260</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::EchoMode::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>请输入新密码</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_recovery_confirmpwd">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>270</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #333333; background: transparent;</string>
+       </property>
+       <property name="text">
+        <string>确认密码</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_recovery_confirmpwd">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>270</y>
+         <width>260</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: 11pt &quot;Microsoft YaHei&quot;;
+    color: #333333;
+}
+QLineEdit:focus {
+    border: 2px solid #39C5BB;
+    background-color: #FFFFFF;
+}
+</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::EchoMode::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>请再次输入新密码</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_recovery_confirm">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>325</y>
+         <width>130</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #E67E22, stop:1 #F39C12);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    font: bold 13pt &quot;Microsoft YaHei&quot;;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #F39C12, stop:1 #F5B041);
+}
+QPushButton:pressed {
+    background: #D35400;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>确认重置</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="miku_photo_2.qrc"/>
+  <include location="miku_photo.qrc"/>
+ </resources>
+ <connections/>
+</ui>
