@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SafeBox - JSON Password Manager</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"><![CDATA[
+QMainWindow {
+    background-color: #f3f6fb;
+}
+
+QWidget#centralwidget {
+    background-color: #f3f6fb;
+}
+
+QLabel#titleLabel {
+    color: #1f2937;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 10px 0px 0px 0px;
+}
+
+QLabel#subTitleLabel {
+    color: #6b7280;
+    font-size: 13px;
+    padding-bottom: 8px;
+}
+
+QFrame#leftCard,
+QFrame#centerCard,
+QFrame#rightCard {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+}
+
+QLabel#accountLabel,
+QLabel#addLabel,
+QLabel#detailLabel {
+    color: #111827;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 4px 2px 8px 2px;
+}
+
+QListWidget {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #1f2937;
+    font-size: 14px;
+    padding: 4px;
+}
+
+QListWidget::item {
+    min-height: 38px;
+    padding-left: 12px;
+    padding-right: 10px;
+    margin: 2px 0px;
+    border-radius: 8px;
+}
+
+QListWidget::item:hover {
+    background-color: #eef4ff;
+}
+
+QListWidget::item:selected {
+    background-color: #dbeafe;
+    color: #0f4c81;
+    font-weight: 600;
+}
+
+QLineEdit {
+    min-height: 38px;
+    background-color: #f9fafb;
+    color: #111827;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    selection-background-color: #bfdbfe;
+}
+
+QLineEdit:hover {
+    border: 1px solid #9ca3af;
+}
+
+QLineEdit:focus {
+    background-color: #ffffff;
+    border: 2px solid #60a5fa;
+}
+
+QPushButton {
+    min-height: 40px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px 18px;
+}
+
+QPushButton:hover {
+    background-color: #1d4ed8;
+}
+
+QPushButton:pressed {
+    background-color: #1e40af;
+}
+
+QPushButton:disabled {
+    background-color: #cbd5e1;
+    color: #64748b;
+}
+
+QMenuBar {
+    background-color: #f3f6fb;
+    color: #374151;
+    border: none;
+}
+
+QMenuBar::item:selected {
+    background-color: #e5e7eb;
+    border-radius: 6px;
+}
+
+QStatusBar {
+    background-color: #f3f6fb;
+    color: #6b7280;
+    border: none;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 2px;
+}
+
+QScrollBar::handle:vertical {
+    background: #cbd5e1;
+    min-height: 28px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #94a3b8;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background: transparent;
+    height: 10px;
+    margin: 2px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #cbd5e1;
+    min-width: 28px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+]]></string>
+  </property>
+
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <property name="leftMargin"><number>24</number></property>
+    <property name="topMargin"><number>20</number></property>
+    <property name="rightMargin"><number>24</number></property>
+    <property name="bottomMargin"><number>20</number></property>
+    <property name="spacing"><number>12</number></property>
+
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="text">
+       <string>🔐 SafeBox</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QLabel" name="subTitleLabel">
+      <property name="text">
+       <string>Local JSON Password Manager</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <layout class="QHBoxLayout" name="bodyLayout">
+      <property name="spacing"><number>14</number></property>
+
+      <item>
+       <widget class="QFrame" name="leftCard">
+        <layout class="QVBoxLayout" name="leftLayout">
+         <property name="leftMargin"><number>14</number></property>
+         <property name="topMargin"><number>14</number></property>
+         <property name="rightMargin"><number>14</number></property>
+         <property name="bottomMargin"><number>14</number></property>
+         <property name="spacing"><number>8</number></property>
+         <item>
+          <widget class="QLabel" name="accountLabel">
+           <property name="text">
+            <string>账号列表</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="listWidget"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+
+      <item>
+       <widget class="QFrame" name="centerCard">
+        <layout class="QVBoxLayout" name="centerLayout">
+         <property name="leftMargin"><number>18</number></property>
+         <property name="topMargin"><number>18</number></property>
+         <property name="rightMargin"><number>18</number></property>
+         <property name="bottomMargin"><number>18</number></property>
+         <property name="spacing"><number>12</number></property>
+
+         <item>
+          <widget class="QLabel" name="addLabel">
+           <property name="text">
+            <string>添加密码</string>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="placeholderText">
+            <string>名称</string>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <widget class="QLineEdit" name="lineEdit_2">
+           <property name="placeholderText">
+            <string>账号</string>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <widget class="QLineEdit" name="lineEdit_3">
+           <property name="placeholderText">
+            <string>密码</string>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="text">
+            <string>保存</string>
+           </property>
+          </widget>
+         </item>
+
+        </layout>
+       </widget>
+      </item>
+
+      <item>
+       <widget class="QFrame" name="rightCard">
+        <layout class="QVBoxLayout" name="rightLayout">
+         <property name="leftMargin"><number>14</number></property>
+         <property name="topMargin"><number>14</number></property>
+         <property name="rightMargin"><number>14</number></property>
+         <property name="bottomMargin"><number>14</number></property>
+         <property name="spacing"><number>8</number></property>
+         <item>
+          <widget class="QLabel" name="detailLabel">
+           <property name="text">
+            <string>详细信息</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="listWidget_2"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+
+     </layout>
+    </item>
+
+   </layout>
+  </widget>
+
+  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
