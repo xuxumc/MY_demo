@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>miku_peg-removebg-preview.png</file>
+        <file>miku_peg.png</file>
+    </qresource>
+</RCC>

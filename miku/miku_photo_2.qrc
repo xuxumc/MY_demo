@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>miku_peg_2.png</file>
+        <file>miku_peg_2.1.png</file>
+    </qresource>
+</RCC>
