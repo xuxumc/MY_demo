@@ -27,3 +27,17 @@
 
 使用技术：
 QT,JSON,C++  
+
+## 📔 Diary_demo
+
+一个基于 Qt6 的简易日记程序练习。
+
+✨ Features:
+
+- 📝 新建并保存日记
+- 📚 列表显示已保存的日记
+- 💾 JSON 数据存储
+- 🔐 Windows Hello 身份验证
+
+使用技术：
+QT,C++,JSON,Windows Hello

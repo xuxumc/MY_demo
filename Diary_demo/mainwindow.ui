@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>720</width>
+    <height>420</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>我的日记</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow, QWidget#centralwidget {
+    background-color: #F5F2EB;
+    color: #333333;
+    font-family: &quot;Microsoft YaHei UI&quot;;
+    font-size: 14px;
+}
+QFrame#noteCard {
+    background-color: #FFFDF8;
+    border: 1px solid #DED8CC;
+    border-radius: 12px;
+}
+QLabel#appTitle {
+    color: #3D5A4C;
+    font-size: 24px;
+    font-weight: 700;
+}
+QLabel#tipLabel, QLabel#statusLabel {
+    color: #8A8378;
+    font-size: 12px;
+}
+QLineEdit#titleEdit, QTextEdit#contentEdit, QListWidget#diaryListWidget {
+    background-color: white;
+    border: 1px solid #D9D3C8;
+    border-radius: 8px;
+    padding: 9px;
+    selection-background-color: #7FA18D;
+}
+QLineEdit#titleEdit:focus, QTextEdit#contentEdit:focus, QListWidget#diaryListWidget:focus {
+    border: 1px solid #6E927C;
+}
+QListWidget#diaryListWidget {
+    outline: none;
+    padding: 5px;
+}
+QListWidget#diaryListWidget::item {
+    min-height: 38px;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+QListWidget#diaryListWidget::item:selected {
+    background-color: #DCE8E0;
+    color: #294235;
+}
+QPushButton {
+    min-height: 36px;
+    border-radius: 8px;
+    padding: 0 18px;
+    font-weight: 600;
+}
+QPushButton#newButton, QPushButton#deleteButton, QPushButton#clearButton {
+    background-color: #EEEAE2;
+    color: #4D4A45;
+    border: 1px solid #D9D3C8;
+}
+QPushButton#newButton:hover, QPushButton#deleteButton:hover, QPushButton#clearButton:hover {
+    background-color: #E3DED4;
+}
+QPushButton#saveButton {
+    background-color: #6E927C;
+    color: white;
+    border: none;
+}
+QPushButton#saveButton:hover {
+    background-color: #5D806B;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="pageLayout">
+    <property name="leftMargin">
+     <number>44</number>
+    </property>
+    <property name="topMargin">
+     <number>32</number>
+    </property>
+    <property name="rightMargin">
+     <number>44</number>
+    </property>
+    <property name="bottomMargin">
+     <number>32</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="noteCard">
+      <layout class="QVBoxLayout" name="noteLayout">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <property name="leftMargin">
+        <number>24</number>
+       </property>
+       <property name="topMargin">
+        <number>22</number>
+       </property>
+       <property name="rightMargin">
+        <number>24</number>
+       </property>
+       <property name="bottomMargin">
+        <number>20</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="appTitle">
+         <property name="text">
+          <string>我的日记</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="tipLabel">
+         <property name="text">
+          <string>从左侧选择以前的日记，或新建一篇</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="diaryAreaLayout">
+         <property name="spacing">
+          <number>14</number>
+         </property>
+         <item>
+          <widget class="QListWidget" name="diaryListWidget">
+           <property name="minimumSize">
+            <size>
+             <width>210</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>240</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="alternatingRowColors">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="editorLayout">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <item>
+            <widget class="QLineEdit" name="titleEdit">
+             <property name="placeholderText">
+              <string>请输入日记标题</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextEdit" name="contentEdit">
+             <property name="acceptRichText">
+              <bool>false</bool>
+             </property>
+             <property name="placeholderText">
+              <string>记录今天发生的事情……</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="bottomLayout">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="statusLabel">
+           <property name="text">
+            <string>当前内容尚未保存</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="buttonSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="clearButton">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>清空</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="saveButton">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>保存日记</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,19 @@
+# Qt Creator
+*.user
+.qtc_clangd/
+.qtcreator/
+
+# Build output
+build*/
+debug/
+release/
+Makefile*
+.qmake.stash
+moc_*.cpp
+ui_*.h
+*.o
+*.obj
+*.exe
+
+# Runtime diary data
+diary.json
